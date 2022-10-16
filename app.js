@@ -1,5 +1,7 @@
 const http = require("http")
 
+const PORT = 3000;
+
 const server = http.createServer((req,res) => {
     res.writeHead(200,{"Content-Type": "application/json"});
     res.end(
@@ -9,4 +11,6 @@ const server = http.createServer((req,res) => {
     );
 });
 
-server.listen(3000)
+console.log(`Server is running on 127.0.0.1:${PORT}`)
+
+server.listen(PORT)

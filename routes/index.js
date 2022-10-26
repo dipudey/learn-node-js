@@ -12,7 +12,7 @@ router.get('/',(req,res) => {
     // res.sendFile(path.join(__dirname,"/../pages/home.html"));
 })
 
-router.use(movieRoutes)
+router.use('/movie',movieRoutes)
 
 router.all("/*",(req,res) => {
     res.sendFile(path.join(__dirname,"/../pages/404.html"));
